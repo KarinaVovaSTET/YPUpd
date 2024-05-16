@@ -174,5 +174,28 @@ class Program
 
         Console.WriteLine($"число 1: {num1}");
         Console.WriteLine($"число 2: {num2}");
-//Добавить операции сложения, вычитания, умножения, деления и взятия остатка от деления двух чисел.
-  //Добавить метод перевода числа из одной системы счисления в другую.      
+        
+  //Добавить операции сложения, вычитания, умножения, деления и взятия остатка от деления двух чисел.
+  //Добавить метод перевода числа из одной системы счисления в другую.
+
+        CustomBaseNumber sumResult = num1 + num2;
+        Console.WriteLine($"Сумма: {sumResult}");
+
+        CustomBaseNumber subResult = num1 - num2;
+        Console.WriteLine($"Разность: {subResult}");
+
+        CustomBaseNumber mulResult = num1 * num2;
+        Console.WriteLine($"Произведение: {mulResult}");
+
+        CustomBaseNumber divResult = num1 / num2;
+        Console.WriteLine($"Деление: {divResult}");
+
+        CustomBaseNumber modResult = num1 % num2;
+        Console.WriteLine($"Остаток: {modResult}");
+        
+        Console.Write("Enter new base to convert num1: ");
+        int newBase = int.Parse(Console.ReadLine());
+        CustomBaseNumber convertedNum1 = num1.ConvertBase(newBase);
+        Console.WriteLine($"число 1 в системе счисления с основанием {newBase}: {convertedNum1}");
+    }
+}
